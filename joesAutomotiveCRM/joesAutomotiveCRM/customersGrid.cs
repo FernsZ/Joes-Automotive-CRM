@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace joesAutomotiveCRM
 {
-    public partial class parts_Grid : Form
+    public partial class customersGrid : Form
     {
-        public parts_Grid()
+        public customersGrid()
         {
             InitializeComponent();
         }
