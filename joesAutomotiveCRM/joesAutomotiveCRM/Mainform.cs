@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace joesAutomotiveCRM
 {
-    public partial class Mainform : Form
+    public partial class mainForm : Form
     {
-        public Mainform()
+        public mainForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace joesAutomotiveCRM
 {
-    partial class Mainform
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.customersButton = new System.Windows.Forms.Button();
             this.vehiclesButton = new System.Windows.Forms.Button();
             this.partsButton = new System.Windows.Forms.Button();
