@@ -45,6 +45,7 @@
             this.customersButton.TabIndex = 0;
             this.customersButton.Text = "Customers";
             this.customersButton.UseVisualStyleBackColor = true;
+            this.customersButton.Click += new System.EventHandler(this.customersButton_Click);
             // 
             // vehiclesButton
             // 
@@ -54,6 +55,7 @@
             this.vehiclesButton.TabIndex = 1;
             this.vehiclesButton.Text = "Vehicles";
             this.vehiclesButton.UseVisualStyleBackColor = true;
+            this.vehiclesButton.Click += new System.EventHandler(this.vehiclesButton_Click);
             // 
             // partsButton
             // 
@@ -63,6 +65,7 @@
             this.partsButton.TabIndex = 2;
             this.partsButton.Text = "Parts";
             this.partsButton.UseVisualStyleBackColor = true;
+            this.partsButton.Click += new System.EventHandler(this.partsButton_Click);
             // 
             // invoicesButton
             // 
@@ -72,6 +75,7 @@
             this.invoicesButton.TabIndex = 3;
             this.invoicesButton.Text = "Invoices";
             this.invoicesButton.UseVisualStyleBackColor = true;
+            this.invoicesButton.Click += new System.EventHandler(this.invoicesButton_Click);
             // 
             // pictureBox1
             // 
@@ -83,7 +87,7 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Mainform
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +98,7 @@
             this.Controls.Add(this.vehiclesButton);
             this.Controls.Add(this.customersButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Mainform";
+            this.Name = "mainForm";
             this.Text = "Joe\'s Automotive";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
