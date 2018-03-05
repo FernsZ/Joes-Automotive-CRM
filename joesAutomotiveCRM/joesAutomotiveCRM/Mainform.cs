@@ -16,5 +16,25 @@ namespace joesAutomotiveCRM
         {
             InitializeComponent();
         }
+
+        private void customersButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vehiclesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void partsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void invoicesButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
