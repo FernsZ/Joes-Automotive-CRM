@@ -16,5 +16,20 @@ namespace joesAutomotiveCRM
         {
             InitializeComponent();
         }
+
+        private void partsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.partsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesAutomotiveDataSet);
+
+        }
+
+        private void partsGrid_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'joesAutomotiveDataSet.Parts' table. You can move, or remove it, as needed.
+            this.partsTableAdapter.Fill(this.joesAutomotiveDataSet.Parts);
+
+        }
     }
 }
