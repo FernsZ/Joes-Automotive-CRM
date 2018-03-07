@@ -78,6 +78,11 @@
     <Compile Include="invoicesGrid.Designer.cs">
       <DependentUpon>invoicesGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="joesAutomotiveDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>joesAutomotiveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +140,17 @@
     <EmbeddedResource Include="vehiclesGrid.resx">
       <DependentUpon>vehiclesGrid.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="joesAutomotiveDataSet.xsc">
+      <DependentUpon>joesAutomotiveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="joesAutomotiveDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>joesAutomotiveDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="joesAutomotiveDataSet.xss">
+      <DependentUpon>joesAutomotiveDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
