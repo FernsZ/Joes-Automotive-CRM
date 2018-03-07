@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-parts Grid",
+      "appliesTo": "joesAutomotiveCRM/joesAutomotiveCRM/parts Grid.cs",
+      "type": "launch"
+    }
+  ]
+}
