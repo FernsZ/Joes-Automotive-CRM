@@ -22,5 +22,10 @@ namespace joesAutomotiveCRM
         {
             this.Close();
         }
+
+        private void lblAddress_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
