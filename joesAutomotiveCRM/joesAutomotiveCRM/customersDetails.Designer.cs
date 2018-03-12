@@ -39,7 +39,7 @@
             this.labelAddress = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblAddressLn2 = new System.Windows.Forms.Label();
-            this.editButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.vehicleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -134,14 +134,15 @@
             this.lblAddressLn2.Size = new System.Drawing.Size(0, 13);
             this.lblAddressLn2.TabIndex = 11;
             // 
-            // editButton
+            // saveButton
             // 
-            this.editButton.Location = new System.Drawing.Point(13, 226);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
-            this.editButton.TabIndex = 13;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(13, 226);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 13;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // refreshButton
             // 
@@ -170,7 +171,7 @@
             this.ClientSize = new System.Drawing.Size(448, 261);
             this.Controls.Add(this.vehicleButton);
             this.Controls.Add(this.refreshButton);
-            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.lblAddressLn2);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.labelAddress);
@@ -201,7 +202,7 @@
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblAddressLn2;
-        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Button vehicleButton;
     }
