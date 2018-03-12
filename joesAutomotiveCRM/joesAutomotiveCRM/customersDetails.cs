@@ -16,6 +16,7 @@ namespace joesAutomotiveCRM
         {
             InitializeComponent();
             this.Text = customer;
+            refreshInfo();
             vehicleButton.Visible = showButton;
         }
 
@@ -31,6 +32,18 @@ namespace joesAutomotiveCRM
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
+            refreshInfo();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            vehicleDetails vehicleD = new vehicleDetails(vehiclesListBox.Text, false);
+        }
+
+        private void refreshInfo()
+        {
+            /*The purpose of refresh functions is to check the data in the database 
+            and set all textboxes on the form to that.*/
             this.Text = "";
             lblName.Text = "";
             lblPhone.Text = "";
@@ -39,9 +52,10 @@ namespace joesAutomotiveCRM
             lblAddressLn2.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
-            vehicleDetails vehicleD = new vehicleDetails(vehiclesListBox.Text, false);
+            /*The save function sets the items in the database
+            to what is currently on the form.*/
         }
     }
 }
