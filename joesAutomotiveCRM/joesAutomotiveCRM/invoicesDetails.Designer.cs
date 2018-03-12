@@ -59,8 +59,6 @@
             this.txtCaseworker = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtVat = new System.Windows.Forms.TextBox();
-            this.txtTotalPerItem = new System.Windows.Forms.TextBox();
             this.labelDesc = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelVat = new System.Windows.Forms.Label();
@@ -75,6 +73,11 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
+            this.checkBoxFluidCheck = new System.Windows.Forms.CheckBox();
+            this.labelFluidPrice = new System.Windows.Forms.Label();
+            this.labelFluidVAT = new System.Windows.Forms.Label();
+            this.lblVat = new System.Windows.Forms.Label();
+            this.lblTotalPerItem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +107,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(387, 292);
+            this.backButton.Location = new System.Drawing.Point(387, 314);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 3;
@@ -114,7 +117,7 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(291, 292);
+            this.buttonExport.Location = new System.Drawing.Point(291, 314);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(90, 23);
             this.buttonExport.TabIndex = 4;
@@ -300,20 +303,6 @@
             this.txtPrice.Size = new System.Drawing.Size(60, 20);
             this.txtPrice.TabIndex = 29;
             // 
-            // txtVat
-            // 
-            this.txtVat.Location = new System.Drawing.Point(332, 191);
-            this.txtVat.Name = "txtVat";
-            this.txtVat.Size = new System.Drawing.Size(60, 20);
-            this.txtVat.TabIndex = 28;
-            // 
-            // txtTotalPerItem
-            // 
-            this.txtTotalPerItem.Location = new System.Drawing.Point(398, 191);
-            this.txtTotalPerItem.Name = "txtTotalPerItem";
-            this.txtTotalPerItem.Size = new System.Drawing.Size(60, 20);
-            this.txtTotalPerItem.TabIndex = 27;
-            // 
             // labelDesc
             // 
             this.labelDesc.AutoSize = true;
@@ -352,21 +341,21 @@
             // 
             // txtVatTotal
             // 
-            this.txtVatTotal.Location = new System.Drawing.Point(398, 217);
+            this.txtVatTotal.Location = new System.Drawing.Point(398, 239);
             this.txtVatTotal.Name = "txtVatTotal";
             this.txtVatTotal.Size = new System.Drawing.Size(60, 20);
             this.txtVatTotal.TabIndex = 34;
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(398, 241);
+            this.txtSubtotal.Location = new System.Drawing.Point(398, 263);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(60, 20);
             this.txtSubtotal.TabIndex = 35;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(398, 266);
+            this.txtTotal.Location = new System.Drawing.Point(398, 288);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(60, 20);
             this.txtTotal.TabIndex = 36;
@@ -374,7 +363,7 @@
             // listBoxInvoiceItems
             // 
             this.listBoxInvoiceItems.FormattingEnabled = true;
-            this.listBoxInvoiceItems.Location = new System.Drawing.Point(13, 217);
+            this.listBoxInvoiceItems.Location = new System.Drawing.Point(13, 239);
             this.listBoxInvoiceItems.Name = "listBoxInvoiceItems";
             this.listBoxInvoiceItems.Size = new System.Drawing.Size(247, 69);
             this.listBoxInvoiceItems.TabIndex = 37;
@@ -382,7 +371,7 @@
             // labelVatTotal
             // 
             this.labelVatTotal.AutoSize = true;
-            this.labelVatTotal.Location = new System.Drawing.Point(337, 220);
+            this.labelVatTotal.Location = new System.Drawing.Point(337, 242);
             this.labelVatTotal.Name = "labelVatTotal";
             this.labelVatTotal.Size = new System.Drawing.Size(55, 13);
             this.labelVatTotal.TabIndex = 38;
@@ -391,7 +380,7 @@
             // labelSubtotal
             // 
             this.labelSubtotal.AutoSize = true;
-            this.labelSubtotal.Location = new System.Drawing.Point(346, 244);
+            this.labelSubtotal.Location = new System.Drawing.Point(346, 266);
             this.labelSubtotal.Name = "labelSubtotal";
             this.labelSubtotal.Size = new System.Drawing.Size(46, 13);
             this.labelSubtotal.TabIndex = 39;
@@ -401,7 +390,7 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(345, 269);
+            this.labelTotal.Location = new System.Drawing.Point(345, 291);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(47, 13);
             this.labelTotal.TabIndex = 40;
@@ -409,7 +398,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(13, 292);
+            this.buttonRefresh.Location = new System.Drawing.Point(13, 314);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
             this.buttonRefresh.TabIndex = 41;
@@ -419,7 +408,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(95, 292);
+            this.buttonSave.Location = new System.Drawing.Point(95, 314);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 42;
@@ -429,18 +418,69 @@
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(177, 292);
+            this.buttonLoad.Location = new System.Drawing.Point(177, 314);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(75, 23);
             this.buttonLoad.TabIndex = 43;
             this.buttonLoad.Text = "Load .txt";
             this.buttonLoad.UseVisualStyleBackColor = true;
             // 
+            // checkBoxFluidCheck
+            // 
+            this.checkBoxFluidCheck.AutoSize = true;
+            this.checkBoxFluidCheck.Location = new System.Drawing.Point(13, 216);
+            this.checkBoxFluidCheck.Name = "checkBoxFluidCheck";
+            this.checkBoxFluidCheck.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxFluidCheck.TabIndex = 44;
+            this.checkBoxFluidCheck.Text = "Fluid Checkbox";
+            this.checkBoxFluidCheck.UseVisualStyleBackColor = true;
+            // 
+            // labelFluidPrice
+            // 
+            this.labelFluidPrice.AutoSize = true;
+            this.labelFluidPrice.Location = new System.Drawing.Point(275, 220);
+            this.labelFluidPrice.Name = "labelFluidPrice";
+            this.labelFluidPrice.Size = new System.Drawing.Size(40, 13);
+            this.labelFluidPrice.TabIndex = 45;
+            this.labelFluidPrice.Text = "$24.99";
+            // 
+            // labelFluidVAT
+            // 
+            this.labelFluidVAT.AutoSize = true;
+            this.labelFluidVAT.Location = new System.Drawing.Point(346, 220);
+            this.labelFluidVAT.Name = "labelFluidVAT";
+            this.labelFluidVAT.Size = new System.Drawing.Size(28, 13);
+            this.labelFluidVAT.TabIndex = 46;
+            this.labelFluidVAT.Text = "error";
+            // 
+            // lblVat
+            // 
+            this.lblVat.AutoSize = true;
+            this.lblVat.Location = new System.Drawing.Point(333, 198);
+            this.lblVat.Name = "lblVat";
+            this.lblVat.Size = new System.Drawing.Size(28, 13);
+            this.lblVat.TabIndex = 47;
+            this.lblVat.Text = "error";
+            // 
+            // lblTotalPerItem
+            // 
+            this.lblTotalPerItem.AutoSize = true;
+            this.lblTotalPerItem.Location = new System.Drawing.Point(402, 197);
+            this.lblTotalPerItem.Name = "lblTotalPerItem";
+            this.lblTotalPerItem.Size = new System.Drawing.Size(28, 13);
+            this.lblTotalPerItem.TabIndex = 48;
+            this.lblTotalPerItem.Text = "error";
+            // 
             // invoicesDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 323);
+            this.ClientSize = new System.Drawing.Size(474, 347);
+            this.Controls.Add(this.lblTotalPerItem);
+            this.Controls.Add(this.lblVat);
+            this.Controls.Add(this.labelFluidVAT);
+            this.Controls.Add(this.labelFluidPrice);
+            this.Controls.Add(this.checkBoxFluidCheck);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonRefresh);
@@ -456,8 +496,6 @@
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelDesc);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtVat);
-            this.Controls.Add(this.txtTotalPerItem);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCaseworker);
             this.Controls.Add(this.labelCaseworker);
@@ -524,8 +562,6 @@
         private System.Windows.Forms.TextBox txtCaseworker;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtVat;
-        private System.Windows.Forms.TextBox txtTotalPerItem;
         private System.Windows.Forms.Label labelDesc;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelVat;
@@ -540,5 +576,10 @@
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.CheckBox checkBoxFluidCheck;
+        private System.Windows.Forms.Label labelFluidPrice;
+        private System.Windows.Forms.Label labelFluidVAT;
+        private System.Windows.Forms.Label lblVat;
+        private System.Windows.Forms.Label lblTotalPerItem;
     }
 }

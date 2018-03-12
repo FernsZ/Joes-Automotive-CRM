@@ -61,6 +61,16 @@ namespace joesAutomotiveCRM
 
             listBoxInvoiceItems.SelectedIndex = 0;
             txtDesc.Text = "";
+            txtPrice.Text = "";
+            try
+            {
+                lblVat.Text = (double.Parse(txtPrice.Text) * 0.06).ToString();
+                lblTotalPerItem.Text = (double.Parse(txtPrice.Text) + double.Parse(lblVat.Text)).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("There is an error with the invoice you are attempting to load. Please try again.");
+            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
