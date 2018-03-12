@@ -72,6 +72,12 @@
     <Compile Include="customersGrid.Designer.cs">
       <DependentUpon>customersGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="invoicesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoicesDetails.Designer.cs">
+      <DependentUpon>invoicesDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="invoicesGrid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="partsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="partsDetails.Designer.cs">
+      <DependentUpon>partsDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="partsGrid.cs">
       <SubType>Form</SubType>
@@ -115,11 +127,17 @@
     <EmbeddedResource Include="customersGrid.resx">
       <DependentUpon>customersGrid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invoicesDetails.resx">
+      <DependentUpon>invoicesDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="invoicesGrid.resx">
       <DependentUpon>invoicesGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="partsDetails.resx">
+      <DependentUpon>partsDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="partsGrid.resx">
       <DependentUpon>partsGrid.cs</DependentUpon>
