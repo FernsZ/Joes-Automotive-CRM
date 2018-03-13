@@ -51,7 +51,6 @@ namespace joesAutomotiveCRM
             txtInvoiceLn2.Text = "";
             txtInvoiceLn3.Text = "";
             txtInvoiceLn4.Text = "";
-            txtVatReg.Text = "";
             txtTax.Text = "";
             txtInvoiceNo.Text = "";
             txtPONo.Text = "";

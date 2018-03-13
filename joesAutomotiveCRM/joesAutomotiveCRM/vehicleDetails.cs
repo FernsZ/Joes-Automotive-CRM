@@ -12,10 +12,10 @@ namespace joesAutomotiveCRM
 {
     public partial class vehicleDetails : Form
     {
-        public vehicleDetails(string vehicle, bool showButton)
+        public vehicleDetails(int vehicleID, bool showButton)
         {
             InitializeComponent();
-            this.Text = vehicle;
+            this.Text = "";
             vehicleButton.Visible = showButton;
         }
 
