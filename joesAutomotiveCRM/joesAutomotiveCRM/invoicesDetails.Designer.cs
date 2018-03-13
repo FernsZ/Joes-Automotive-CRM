@@ -38,9 +38,7 @@
             this.buttonExport = new System.Windows.Forms.Button();
             this.txtInvoiceNo = new System.Windows.Forms.TextBox();
             this.txtTax = new System.Windows.Forms.TextBox();
-            this.txtVatReg = new System.Windows.Forms.TextBox();
             this.txtDueDate = new System.Windows.Forms.TextBox();
-            this.labelVatReg = new System.Windows.Forms.Label();
             this.labelTaxDate = new System.Windows.Forms.Label();
             this.labelInvoiceNo = new System.Windows.Forms.Label();
             this.labelPONo = new System.Windows.Forms.Label();
@@ -135,28 +133,12 @@
             this.txtTax.Size = new System.Drawing.Size(60, 20);
             this.txtTax.TabIndex = 6;
             // 
-            // txtVatReg
-            // 
-            this.txtVatReg.Location = new System.Drawing.Point(270, 45);
-            this.txtVatReg.Name = "txtVatReg";
-            this.txtVatReg.Size = new System.Drawing.Size(60, 20);
-            this.txtVatReg.TabIndex = 7;
-            // 
             // txtDueDate
             // 
             this.txtDueDate.Location = new System.Drawing.Point(402, 87);
             this.txtDueDate.Name = "txtDueDate";
             this.txtDueDate.Size = new System.Drawing.Size(60, 20);
             this.txtDueDate.TabIndex = 8;
-            // 
-            // labelVatReg
-            // 
-            this.labelVatReg.AutoSize = true;
-            this.labelVatReg.Location = new System.Drawing.Point(268, 29);
-            this.labelVatReg.Name = "labelVatReg";
-            this.labelVatReg.Size = new System.Drawing.Size(69, 13);
-            this.labelVatReg.TabIndex = 9;
-            this.labelVatReg.Text = "Vat Reg. No.";
             // 
             // labelTaxDate
             // 
@@ -475,9 +457,7 @@
             this.Controls.Add(this.labelPONo);
             this.Controls.Add(this.labelInvoiceNo);
             this.Controls.Add(this.labelTaxDate);
-            this.Controls.Add(this.labelVatReg);
             this.Controls.Add(this.txtDueDate);
-            this.Controls.Add(this.txtVatReg);
             this.Controls.Add(this.txtTax);
             this.Controls.Add(this.txtInvoiceNo);
             this.Controls.Add(this.buttonExport);
@@ -503,9 +483,7 @@
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.TextBox txtInvoiceNo;
         private System.Windows.Forms.TextBox txtTax;
-        private System.Windows.Forms.TextBox txtVatReg;
         private System.Windows.Forms.TextBox txtDueDate;
-        private System.Windows.Forms.Label labelVatReg;
         private System.Windows.Forms.Label labelTaxDate;
         private System.Windows.Forms.Label labelInvoiceNo;
         private System.Windows.Forms.Label labelPONo;
