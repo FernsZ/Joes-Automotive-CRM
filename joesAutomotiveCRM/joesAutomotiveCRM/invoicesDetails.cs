@@ -51,7 +51,6 @@ namespace joesAutomotiveCRM
             txtInvoiceLn2.Text = "";
             txtInvoiceLn3.Text = "";
             txtInvoiceLn4.Text = "";
-            txtVatReg.Text = "";
             txtTax.Text = "";
             txtInvoiceNo.Text = "";
             txtPONo.Text = "";
@@ -68,6 +67,20 @@ namespace joesAutomotiveCRM
             /*The save function sets the items in the database
             to what is currently on the form.*/
 
+        }
+
+        private void checkBoxFluidCheckup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxFluidCheckup.Checked)
+            {
+                labelFluidCUPrice.Text = "$24.99";
+                labelFluidCUVAT.Text = (double.Parse(labelFluidCUPrice.Text) * 0.06).ToString("c");
+                labelFluidCUTotal.Text = (double.Parse(labelFluidCUPrice.Text) * 1.06).ToString("c");
+            }
+            else
+            {
+
+            }
         }
     }
 }

@@ -73,6 +73,10 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
+            this.checkBoxFluidCheckup = new System.Windows.Forms.CheckBox();
+            this.labelFluidCUPrice = new System.Windows.Forms.Label();
+            this.labelFluidCUVAT = new System.Windows.Forms.Label();
+            this.labelFluidCUTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +106,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(387, 292);
+            this.backButton.Location = new System.Drawing.Point(386, 317);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 3;
@@ -112,7 +116,7 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(291, 292);
+            this.buttonExport.Location = new System.Drawing.Point(290, 317);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(90, 23);
             this.buttonExport.TabIndex = 4;
@@ -334,21 +338,21 @@
             // 
             // txtVatTotal
             // 
-            this.txtVatTotal.Location = new System.Drawing.Point(398, 217);
+            this.txtVatTotal.Location = new System.Drawing.Point(397, 242);
             this.txtVatTotal.Name = "txtVatTotal";
             this.txtVatTotal.Size = new System.Drawing.Size(60, 20);
             this.txtVatTotal.TabIndex = 34;
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(398, 241);
+            this.txtSubtotal.Location = new System.Drawing.Point(397, 266);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(60, 20);
             this.txtSubtotal.TabIndex = 35;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(398, 266);
+            this.txtTotal.Location = new System.Drawing.Point(397, 291);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(60, 20);
             this.txtTotal.TabIndex = 36;
@@ -356,7 +360,7 @@
             // listBoxInvoiceItems
             // 
             this.listBoxInvoiceItems.FormattingEnabled = true;
-            this.listBoxInvoiceItems.Location = new System.Drawing.Point(13, 217);
+            this.listBoxInvoiceItems.Location = new System.Drawing.Point(12, 242);
             this.listBoxInvoiceItems.Name = "listBoxInvoiceItems";
             this.listBoxInvoiceItems.Size = new System.Drawing.Size(247, 69);
             this.listBoxInvoiceItems.TabIndex = 37;
@@ -364,7 +368,7 @@
             // labelVatTotal
             // 
             this.labelVatTotal.AutoSize = true;
-            this.labelVatTotal.Location = new System.Drawing.Point(337, 220);
+            this.labelVatTotal.Location = new System.Drawing.Point(336, 245);
             this.labelVatTotal.Name = "labelVatTotal";
             this.labelVatTotal.Size = new System.Drawing.Size(55, 13);
             this.labelVatTotal.TabIndex = 38;
@@ -373,7 +377,7 @@
             // labelSubtotal
             // 
             this.labelSubtotal.AutoSize = true;
-            this.labelSubtotal.Location = new System.Drawing.Point(346, 244);
+            this.labelSubtotal.Location = new System.Drawing.Point(345, 269);
             this.labelSubtotal.Name = "labelSubtotal";
             this.labelSubtotal.Size = new System.Drawing.Size(46, 13);
             this.labelSubtotal.TabIndex = 39;
@@ -383,7 +387,7 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(345, 269);
+            this.labelTotal.Location = new System.Drawing.Point(344, 294);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(47, 13);
             this.labelTotal.TabIndex = 40;
@@ -391,7 +395,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(13, 292);
+            this.buttonRefresh.Location = new System.Drawing.Point(12, 317);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
             this.buttonRefresh.TabIndex = 41;
@@ -401,7 +405,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(95, 292);
+            this.buttonSave.Location = new System.Drawing.Point(94, 317);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 42;
@@ -411,18 +415,58 @@
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(177, 292);
+            this.buttonLoad.Location = new System.Drawing.Point(176, 317);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(75, 23);
             this.buttonLoad.TabIndex = 43;
             this.buttonLoad.Text = "Load .txt";
             this.buttonLoad.UseVisualStyleBackColor = true;
             // 
+            // checkBoxFluidCheckup
+            // 
+            this.checkBoxFluidCheckup.AutoSize = true;
+            this.checkBoxFluidCheckup.Location = new System.Drawing.Point(12, 218);
+            this.checkBoxFluidCheckup.Name = "checkBoxFluidCheckup";
+            this.checkBoxFluidCheckup.Size = new System.Drawing.Size(93, 17);
+            this.checkBoxFluidCheckup.TabIndex = 44;
+            this.checkBoxFluidCheckup.Text = "Fluid checkup";
+            this.checkBoxFluidCheckup.UseVisualStyleBackColor = true;
+            this.checkBoxFluidCheckup.CheckedChanged += new System.EventHandler(this.checkBoxFluidCheckup_CheckedChanged);
+            // 
+            // labelFluidCUPrice
+            // 
+            this.labelFluidCUPrice.AutoSize = true;
+            this.labelFluidCUPrice.Location = new System.Drawing.Point(266, 218);
+            this.labelFluidCUPrice.Name = "labelFluidCUPrice";
+            this.labelFluidCUPrice.Size = new System.Drawing.Size(40, 13);
+            this.labelFluidCUPrice.TabIndex = 45;
+            this.labelFluidCUPrice.Text = "$24.99";
+            // 
+            // labelFluidCUVAT
+            // 
+            this.labelFluidCUVAT.AutoSize = true;
+            this.labelFluidCUVAT.Location = new System.Drawing.Point(332, 218);
+            this.labelFluidCUVAT.Name = "labelFluidCUVAT";
+            this.labelFluidCUVAT.Size = new System.Drawing.Size(0, 13);
+            this.labelFluidCUVAT.TabIndex = 46;
+            // 
+            // labelFluidCUTotal
+            // 
+            this.labelFluidCUTotal.AutoSize = true;
+            this.labelFluidCUTotal.Location = new System.Drawing.Point(397, 218);
+            this.labelFluidCUTotal.Name = "labelFluidCUTotal";
+            this.labelFluidCUTotal.Size = new System.Drawing.Size(0, 13);
+            this.labelFluidCUTotal.TabIndex = 47;
+            // 
             // invoicesDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 323);
+            this.ClientSize = new System.Drawing.Size(474, 350);
+            this.Controls.Add(this.labelFluidCUTotal);
+            this.Controls.Add(this.labelFluidCUVAT);
+            this.Controls.Add(this.labelFluidCUPrice);
+            this.Controls.Add(this.checkBoxFluidCheckup);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonRefresh);
@@ -518,5 +562,9 @@
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.CheckBox checkBoxFluidCheckup;
+        private System.Windows.Forms.Label labelFluidCUPrice;
+        private System.Windows.Forms.Label labelFluidCUVAT;
+        private System.Windows.Forms.Label labelFluidCUTotal;
     }
 }

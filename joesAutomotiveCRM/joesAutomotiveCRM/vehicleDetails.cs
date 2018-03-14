@@ -12,10 +12,10 @@ namespace joesAutomotiveCRM
 {
     public partial class vehicleDetails : Form
     {
-        public vehicleDetails(string vehicle, bool showButton)
+        public vehicleDetails(int vehicleID, bool showButton)
         {
             InitializeComponent();
-            this.Text = vehicle;
+            this.Text = "";
             vehicleButton.Visible = showButton;
         }
 
@@ -26,8 +26,8 @@ namespace joesAutomotiveCRM
 
         private void vehicleButton_Click(object sender, EventArgs e)
         {
-            string owner = txtName.Text;
-            customersDetails customersD = new customersDetails(owner, false);
+            int ownerID = 0;
+            customersDetails customersD = new customersDetails(ownerID, false);
         }
 
         private void refreshInfo()
