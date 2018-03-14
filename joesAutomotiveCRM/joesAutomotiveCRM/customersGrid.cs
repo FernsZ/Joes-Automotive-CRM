@@ -19,7 +19,8 @@ namespace joesAutomotiveCRM
 
         private void showDetailsButton_Click(object sender, EventArgs e)
         {
-            customersDetails customersD = new customersDetails(customersGridV.CurrentRow.HeaderCell.ToString(), true);
+            int customerID = 0;
+            customersDetails customersD = new customersDetails(customerID, true);
             customersD.ShowDialog();
         }
 
