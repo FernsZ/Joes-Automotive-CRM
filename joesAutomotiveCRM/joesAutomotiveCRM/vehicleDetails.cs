@@ -12,6 +12,9 @@ namespace joesAutomotiveCRM
 {
     public partial class vehicleDetails : Form
     {
+        enum Make { Audi, Cadillac, Chevrolet, Chrysler, Ferrari, Ford, GM, Lexus, MercedesBenz, Porsche, Tesla, Toyota, Volkswagen, Other, Error }
+        Make make;
+
         public vehicleDetails(int vehicleID, bool showButton)
         {
             InitializeComponent();
@@ -35,7 +38,9 @@ namespace joesAutomotiveCRM
             /*The purpose of refresh functions is to check the data in the database 
             and set all textboxes on the form to that.*/
             this.Text = "";
-            txtMake.Text = "";
+            make = makeParse("");
+            txtMake.Text = make.ToString();
+            if(txtMake.Text == "MercedesBenz") { txtMake.Text = "Mercedes-Benz"; }
             txtModel.Text = "";
             txtYear.Text = "";
             txtColor.Text = "";
@@ -50,6 +55,60 @@ namespace joesAutomotiveCRM
         {
             /*The save function sets the items in the database
             to what is currently on the form.*/
+        }
+
+        private Make makeParse(string makeS)
+        {
+            switch (makeS)
+            {
+                case "Audi":
+                    make = Make.Audi;
+                    break;
+                case "Cadillac":
+                    make = Make.Cadillac;
+                    break;
+                case "Chevrolet":
+                    make = Make.Chevrolet;
+                    break;
+                case "Chrysler":
+                    make = Make.Chrysler;
+                    break;
+                case "Ferrari":
+                    make = Make.Ferrari;
+                    break;
+                case "Ford":
+                    make = Make.Ford;
+                    break;
+                case "GM":
+                    make = Make.GM;
+                    break;
+                case "Lexus":
+                    make = Make.Lexus;
+                    break;
+                case "Mercedes-Benz":
+                    make = Make.MercedesBenz;
+                    break;
+                case "Porsche":
+                    make = Make.Porsche;
+                    break;
+                case "Tesla":
+                    make = Make.Tesla;
+                    break;
+                case "Toyota":
+                    make = Make.Toyota;
+                    break;
+                case "Volkswagen":
+                    make = Make.Volkswagen;
+                    break;
+                case "Other":
+                    make = Make.Other;
+                    break;
+                default:
+                    make = Make.Error;
+                    MessageBox.Show("Error. Please enter a valid Make./nEnter Other and contact programmer to fix later if Make should be valid.");
+                    break;
+            }
+            return make;
         }
     }
 }
