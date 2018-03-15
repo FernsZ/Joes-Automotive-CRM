@@ -79,7 +79,9 @@ namespace joesAutomotiveCRM
             }
             else
             {
-
+                labelFluidCUPrice.Text = "";
+                labelFluidCUVAT.Text = "";
+                labelFluidCUTotal.Text = "";
             }
         }
     }

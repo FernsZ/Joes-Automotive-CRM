@@ -15,7 +15,7 @@ namespace joesAutomotiveCRM
         public vehicleDetails(int vehicleID, bool showButton)
         {
             InitializeComponent();
-            this.Text = "";
+            refreshInfo();
             vehicleButton.Visible = showButton;
         }
 
