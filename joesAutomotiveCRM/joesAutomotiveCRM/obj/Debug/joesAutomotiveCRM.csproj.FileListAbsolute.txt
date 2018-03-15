@@ -34,3 +34,5 @@ S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.csproj.CoreCompileInputs.cache
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.exe
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.pdb
+S:\C#\GitHub\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.invoicesDetails.resources
+S:\C#\GitHub\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.partsDetails.resources

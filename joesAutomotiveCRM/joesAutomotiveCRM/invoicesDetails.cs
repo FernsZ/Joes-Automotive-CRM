@@ -48,9 +48,6 @@ namespace joesAutomotiveCRM
             /*The purpose of refresh functions is to check the data in the database 
             and set all textboxes on the form to that.*/
             txtInvoiceLn1.Text = "";
-            txtInvoiceLn2.Text = "";
-            txtInvoiceLn3.Text = "";
-            txtInvoiceLn4.Text = "";
             txtTax.Text = "";
             txtInvoiceNo.Text = "";
             txtPONo.Text = "";
