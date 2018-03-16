@@ -37,17 +37,17 @@
             this.customersTableAdapter = new joesAutomotiveCRM.joesAutomotiveDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new joesAutomotiveCRM.joesAutomotiveDataSetTableAdapters.TableAdapterManager();
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.customersGridV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +57,10 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearchName = new System.Windows.Forms.Button();
+            this.buttonSearchNumber = new System.Windows.Forms.Button();
+            this.buttonSearchEmail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesAutomotiveDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
@@ -136,6 +140,31 @@
             this.customersBindingNavigator.TabIndex = 2;
             this.customersBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -168,16 +197,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -200,26 +222,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // customersBindingNavigatorSaveItem
             // 
@@ -304,11 +308,60 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 72;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(296, 3);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Text = "Enter search term";
+            // 
+            // buttonSearchName
+            // 
+            this.buttonSearchName.BackgroundImage = global::joesAutomotiveCRM.Properties.Resources.search;
+            this.buttonSearchName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSearchName.Location = new System.Drawing.Point(402, 3);
+            this.buttonSearchName.Name = "buttonSearchName";
+            this.buttonSearchName.Size = new System.Drawing.Size(57, 22);
+            this.buttonSearchName.TabIndex = 5;
+            this.buttonSearchName.Text = "Name";
+            this.buttonSearchName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearchName.UseVisualStyleBackColor = true;
+            this.buttonSearchName.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // buttonSearchNumber
+            // 
+            this.buttonSearchNumber.BackgroundImage = global::joesAutomotiveCRM.Properties.Resources.search;
+            this.buttonSearchNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSearchNumber.Location = new System.Drawing.Point(465, 3);
+            this.buttonSearchNumber.Name = "buttonSearchNumber";
+            this.buttonSearchNumber.Size = new System.Drawing.Size(64, 22);
+            this.buttonSearchNumber.TabIndex = 6;
+            this.buttonSearchNumber.Text = "Phone";
+            this.buttonSearchNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearchNumber.UseVisualStyleBackColor = true;
+            // 
+            // buttonSearchEmail
+            // 
+            this.buttonSearchEmail.BackgroundImage = global::joesAutomotiveCRM.Properties.Resources.search;
+            this.buttonSearchEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSearchEmail.Location = new System.Drawing.Point(535, 3);
+            this.buttonSearchEmail.Name = "buttonSearchEmail";
+            this.buttonSearchEmail.Size = new System.Drawing.Size(58, 22);
+            this.buttonSearchEmail.TabIndex = 7;
+            this.buttonSearchEmail.Text = "Email";
+            this.buttonSearchEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearchEmail.UseVisualStyleBackColor = true;
+            // 
             // customersGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 304);
+            this.Controls.Add(this.buttonSearchEmail);
+            this.Controls.Add(this.buttonSearchNumber);
+            this.Controls.Add(this.buttonSearchName);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.customersGridV);
             this.Controls.Add(this.customersBindingNavigator);
             this.Controls.Add(this.showDetailsButton);
@@ -357,5 +410,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button buttonSearchName;
+        private System.Windows.Forms.Button buttonSearchNumber;
+        private System.Windows.Forms.Button buttonSearchEmail;
     }
 }

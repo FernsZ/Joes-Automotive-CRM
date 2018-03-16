@@ -38,5 +38,10 @@ namespace joesAutomotiveCRM
             this.customersTableAdapter.Fill(this.joesAutomotiveDataSet.Customers);
 
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,12 +44,13 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.invoicesListBox = new System.Windows.Forms.ListBox();
             this.buttonNewVehicle = new System.Windows.Forms.Button();
-            this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
             this.richTextBoxNotes = new System.Windows.Forms.RichTextBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.txtPhone2 = new System.Windows.Forms.MaskedTextBox();
             this.labelNotes = new System.Windows.Forms.Label();
             this.buttonUpload = new System.Windows.Forms.Button();
+            this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
+            this.openImageDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,14 +185,6 @@
             this.buttonNewVehicle.UseVisualStyleBackColor = true;
             this.buttonNewVehicle.Click += new System.EventHandler(this.buttonNewVehicle_Click);
             // 
-            // pictureBoxCustomer
-            // 
-            this.pictureBoxCustomer.Location = new System.Drawing.Point(13, 12);
-            this.pictureBoxCustomer.Name = "pictureBoxCustomer";
-            this.pictureBoxCustomer.Size = new System.Drawing.Size(111, 124);
-            this.pictureBoxCustomer.TabIndex = 25;
-            this.pictureBoxCustomer.TabStop = false;
-            // 
             // richTextBoxNotes
             // 
             this.richTextBoxNotes.Location = new System.Drawing.Point(312, 31);
@@ -203,7 +196,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(186, 38);
-            this.txtPhone.Mask = "(000)000-0000";
+            this.txtPhone.Mask = "000-000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(120, 20);
             this.txtPhone.TabIndex = 27;
@@ -211,7 +204,7 @@
             // txtPhone2
             // 
             this.txtPhone2.Location = new System.Drawing.Point(186, 64);
-            this.txtPhone2.Mask = "(000)000-0000";
+            this.txtPhone2.Mask = "000-000-0000";
             this.txtPhone2.Name = "txtPhone2";
             this.txtPhone2.Size = new System.Drawing.Size(120, 20);
             this.txtPhone2.TabIndex = 28;
@@ -233,6 +226,18 @@
             this.buttonUpload.TabIndex = 30;
             this.buttonUpload.Text = "Change Image";
             this.buttonUpload.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxCustomer
+            // 
+            this.pictureBoxCustomer.Location = new System.Drawing.Point(13, 12);
+            this.pictureBoxCustomer.Name = "pictureBoxCustomer";
+            this.pictureBoxCustomer.Size = new System.Drawing.Size(111, 124);
+            this.pictureBoxCustomer.TabIndex = 25;
+            this.pictureBoxCustomer.TabStop = false;
+            // 
+            // openImageDialog
+            // 
+            this.openImageDialog.FileName = "openFileDialog1";
             // 
             // customersDetails
             // 
@@ -293,5 +298,6 @@
         private System.Windows.Forms.MaskedTextBox txtPhone2;
         private System.Windows.Forms.Label labelNotes;
         private System.Windows.Forms.Button buttonUpload;
+        private System.Windows.Forms.OpenFileDialog openImageDialog;
     }
 }
