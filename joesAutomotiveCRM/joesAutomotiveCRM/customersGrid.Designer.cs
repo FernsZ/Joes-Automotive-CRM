@@ -76,6 +76,7 @@
             this.closeButton.TabIndex = 0;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // showDetailsButton
             // 
@@ -306,6 +307,7 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Invoices";
             this.dataGridViewTextBoxColumn7.HeaderText = "Invoices";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 72;
             // 
             // txtSearch

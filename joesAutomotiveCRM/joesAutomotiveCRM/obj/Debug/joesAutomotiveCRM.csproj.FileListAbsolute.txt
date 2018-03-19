@@ -36,3 +36,5 @@ S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.pdb
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.invoicesDetails.resources
 S:\Programming\Final\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.partsDetails.resources
+S:\C#\GitHub\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.invoicesDetails.resources
+S:\C#\GitHub\Joes-Automotive-CRM\joesAutomotiveCRM\joesAutomotiveCRM\obj\Debug\joesAutomotiveCRM.partsDetails.resources

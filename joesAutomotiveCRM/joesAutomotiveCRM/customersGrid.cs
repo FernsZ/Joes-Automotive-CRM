@@ -43,5 +43,10 @@ namespace joesAutomotiveCRM
         {
 
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

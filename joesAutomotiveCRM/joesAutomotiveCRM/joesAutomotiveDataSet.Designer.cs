@@ -392,6 +392,8 @@ namespace joesAutomotiveCRM {
             
             private global::System.Data.DataColumn columnPhone_Number;
             
+            private global::System.Data.DataColumn columnPhone_Number_2;
+            
             private global::System.Data.DataColumn columnEmail_Address;
             
             private global::System.Data.DataColumn columnVehicle;
@@ -467,6 +469,14 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Phone_Number_2Column {
+                get {
+                    return this.columnPhone_Number_2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Email_AddressColumn {
                 get {
                     return this.columnEmail_Address;
@@ -534,13 +544,14 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CustomersRow AddCustomersRow(string Name, string Address, string Phone_Number, string Email_Address, string Vehicle, string Invoices, byte[] Image) {
+            public CustomersRow AddCustomersRow(string Name, string Address, string Phone_Number, string Phone_Number_2, string Email_Address, string Vehicle, string Invoices, byte[] Image) {
                 CustomersRow rowCustomersRow = ((CustomersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
                         Address,
                         Phone_Number,
+                        Phone_Number_2,
                         Email_Address,
                         Vehicle,
                         Invoices,
@@ -578,6 +589,7 @@ namespace joesAutomotiveCRM {
                 this.columnName = base.Columns["Name"];
                 this.columnAddress = base.Columns["Address"];
                 this.columnPhone_Number = base.Columns["Phone Number"];
+                this.columnPhone_Number_2 = base.Columns["Phone Number 2"];
                 this.columnEmail_Address = base.Columns["Email Address"];
                 this.columnVehicle = base.Columns["Vehicle"];
                 this.columnInvoices = base.Columns["Invoices"];
@@ -595,6 +607,8 @@ namespace joesAutomotiveCRM {
                 base.Columns.Add(this.columnAddress);
                 this.columnPhone_Number = new global::System.Data.DataColumn("Phone Number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhone_Number);
+                this.columnPhone_Number_2 = new global::System.Data.DataColumn("Phone Number 2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhone_Number_2);
                 this.columnEmail_Address = new global::System.Data.DataColumn("Email Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail_Address);
                 this.columnVehicle = new global::System.Data.DataColumn("Vehicle", typeof(string), null, global::System.Data.MappingType.Element);
@@ -612,17 +626,16 @@ namespace joesAutomotiveCRM {
                 this.columnCustomer_ID.ReadOnly = true;
                 this.columnCustomer_ID.Unique = true;
                 this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 50;
+                this.columnName.MaxLength = 2147483647;
                 this.columnAddress.AllowDBNull = false;
-                this.columnAddress.MaxLength = 50;
+                this.columnAddress.MaxLength = 2147483647;
                 this.columnPhone_Number.AllowDBNull = false;
                 this.columnPhone_Number.MaxLength = 12;
+                this.columnPhone_Number_2.MaxLength = 12;
                 this.columnEmail_Address.MaxLength = 50;
-                this.columnVehicle.MaxLength = 50;
+                this.columnVehicle.MaxLength = 2147483647;
                 this.columnInvoices.AllowDBNull = false;
                 this.columnInvoices.MaxLength = 10;
-                this.columnImage.ReadOnly = true;
-                this.columnImage.Caption = "Invoices";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -758,6 +771,12 @@ namespace joesAutomotiveCRM {
             
             private global::System.Data.DataColumn columnInvoice_ID;
             
+            private global::System.Data.DataColumn columnCustomer;
+            
+            private global::System.Data.DataColumn columnCaseworker;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public InvoicesDataTable() {
@@ -801,6 +820,30 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CustomerColumn {
+                get {
+                    return this.columnCustomer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CaseworkerColumn {
+                get {
+                    return this.columnCaseworker;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -836,10 +879,13 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InvoicesRow AddInvoicesRow() {
+            public InvoicesRow AddInvoicesRow(string Customer, string Caseworker, string Description) {
                 InvoicesRow rowInvoicesRow = ((InvoicesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null};
+                        null,
+                        Customer,
+                        Caseworker,
+                        Description};
                 rowInvoicesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvoicesRow);
                 return rowInvoicesRow;
@@ -870,6 +916,9 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnInvoice_ID = base.Columns["Invoice ID"];
+                this.columnCustomer = base.Columns["Customer"];
+                this.columnCaseworker = base.Columns["Caseworker"];
+                this.columnDescription = base.Columns["Description"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -877,6 +926,12 @@ namespace joesAutomotiveCRM {
             private void InitClass() {
                 this.columnInvoice_ID = new global::System.Data.DataColumn("Invoice ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInvoice_ID);
+                this.columnCustomer = new global::System.Data.DataColumn("Customer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomer);
+                this.columnCaseworker = new global::System.Data.DataColumn("Caseworker", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaseworker);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnInvoice_ID}, true));
                 this.columnInvoice_ID.AutoIncrement = true;
@@ -885,6 +940,9 @@ namespace joesAutomotiveCRM {
                 this.columnInvoice_ID.AllowDBNull = false;
                 this.columnInvoice_ID.ReadOnly = true;
                 this.columnInvoice_ID.Unique = true;
+                this.columnCustomer.MaxLength = 2147483647;
+                this.columnCaseworker.MaxLength = 2147483647;
+                this.columnDescription.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1231,12 +1289,11 @@ namespace joesAutomotiveCRM {
                 this.columnPart_ID.AllowDBNull = false;
                 this.columnPart_ID.ReadOnly = true;
                 this.columnPart_ID.Unique = true;
-                this.columnPart_name.MaxLength = 50;
+                this.columnPart_name.MaxLength = 2147483647;
                 this.columnPart_cost.AllowDBNull = false;
                 this.columnParts_in_stock.AllowDBNull = false;
                 this.columnParts_ordered.AllowDBNull = false;
-                this.columnCan_be_applied_to.AllowDBNull = false;
-                this.columnCan_be_applied_to.MaxLength = 50;
+                this.columnCan_be_applied_to.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1372,6 +1429,8 @@ namespace joesAutomotiveCRM {
             
             private global::System.Data.DataColumn columnID;
             
+            private global::System.Data.DataColumn columnMake;
+            
             private global::System.Data.DataColumn columnModel;
             
             private global::System.Data.DataColumn columnYear;
@@ -1422,6 +1481,14 @@ namespace joesAutomotiveCRM {
             public global::System.Data.DataColumn IDColumn {
                 get {
                     return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MakeColumn {
+                get {
+                    return this.columnMake;
                 }
             }
             
@@ -1510,10 +1577,11 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VehicleRow AddVehicleRow(string Model, string Year, string Mileage, System.DateTime Date_Recieved, System.DateTime Date_Return, string Owner) {
+            public VehicleRow AddVehicleRow(string Make, string Model, string Year, string Mileage, System.DateTime Date_Recieved, System.DateTime Date_Return, string Owner) {
                 VehicleRow rowVehicleRow = ((VehicleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        Make,
                         Model,
                         Year,
                         Mileage,
@@ -1550,6 +1618,7 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
+                this.columnMake = base.Columns["Make"];
                 this.columnModel = base.Columns["Model"];
                 this.columnYear = base.Columns["Year"];
                 this.columnMileage = base.Columns["Mileage"];
@@ -1563,6 +1632,8 @@ namespace joesAutomotiveCRM {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
+                this.columnMake = new global::System.Data.DataColumn("Make", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMake);
                 this.columnModel = new global::System.Data.DataColumn("Model", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnModel);
                 this.columnYear = new global::System.Data.DataColumn("Year", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1583,12 +1654,17 @@ namespace joesAutomotiveCRM {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
+                this.columnMake.AllowDBNull = false;
+                this.columnMake.MaxLength = 50;
+                this.columnModel.AllowDBNull = false;
                 this.columnModel.MaxLength = 50;
+                this.columnYear.AllowDBNull = false;
                 this.columnYear.MaxLength = 10;
+                this.columnMileage.AllowDBNull = false;
                 this.columnMileage.MaxLength = 10;
                 this.columnDate_Recieved.AllowDBNull = false;
                 this.columnOwner.AllowDBNull = false;
-                this.columnOwner.MaxLength = 50;
+                this.columnOwner.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1775,6 +1851,22 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Phone_Number_2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableCustomers.Phone_Number_2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone Number 2\' in table \'Customers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCustomers.Phone_Number_2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Email_Address {
                 get {
                     try {
@@ -1830,6 +1922,18 @@ namespace joesAutomotiveCRM {
                 set {
                     this[this.tableCustomers.ImageColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPhone_Number_2Null() {
+                return this.IsNull(this.tableCustomers.Phone_Number_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPhone_Number_2Null() {
+                this[this.tableCustomers.Phone_Number_2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1892,6 +1996,90 @@ namespace joesAutomotiveCRM {
                 set {
                     this[this.tableInvoices.Invoice_IDColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Customer {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvoices.CustomerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Customer\' in table \'Invoices\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvoices.CustomerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Caseworker {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvoices.CaseworkerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Caseworker\' in table \'Invoices\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvoices.CaseworkerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Description {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvoices.DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'Invoices\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvoices.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCustomerNull() {
+                return this.IsNull(this.tableInvoices.CustomerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCustomerNull() {
+                this[this.tableInvoices.CustomerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCaseworkerNull() {
+                return this.IsNull(this.tableInvoices.CaseworkerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCaseworkerNull() {
+                this[this.tableInvoices.CaseworkerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tableInvoices.DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDescriptionNull() {
+                this[this.tableInvoices.DescriptionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1989,7 +2177,12 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Can_be_applied_to {
                 get {
-                    return ((string)(this[this.tableParts.Can_be_applied_toColumn]));
+                    try {
+                        return ((string)(this[this.tableParts.Can_be_applied_toColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Can be applied to\' in table \'Parts\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableParts.Can_be_applied_toColumn] = value;
@@ -2018,6 +2211,18 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPart_photoNull() {
                 this[this.tableParts.Part_photoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCan_be_applied_toNull() {
+                return this.IsNull(this.tableParts.Can_be_applied_toColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCan_be_applied_toNull() {
+                this[this.tableParts.Can_be_applied_toColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2048,14 +2253,20 @@ namespace joesAutomotiveCRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Make {
+                get {
+                    return ((string)(this[this.tableVehicle.MakeColumn]));
+                }
+                set {
+                    this[this.tableVehicle.MakeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Model {
                 get {
-                    try {
-                        return ((string)(this[this.tableVehicle.ModelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Model\' in table \'Vehicle\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableVehicle.ModelColumn]));
                 }
                 set {
                     this[this.tableVehicle.ModelColumn] = value;
@@ -2066,12 +2277,7 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Year {
                 get {
-                    try {
-                        return ((string)(this[this.tableVehicle.YearColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Year\' in table \'Vehicle\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableVehicle.YearColumn]));
                 }
                 set {
                     this[this.tableVehicle.YearColumn] = value;
@@ -2082,12 +2288,7 @@ namespace joesAutomotiveCRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Mileage {
                 get {
-                    try {
-                        return ((string)(this[this.tableVehicle.MileageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Mileage\' in table \'Vehicle\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableVehicle.MileageColumn]));
                 }
                 set {
                     this[this.tableVehicle.MileageColumn] = value;
@@ -2130,42 +2331,6 @@ namespace joesAutomotiveCRM {
                 set {
                     this[this.tableVehicle.OwnerColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsModelNull() {
-                return this.IsNull(this.tableVehicle.ModelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetModelNull() {
-                this[this.tableVehicle.ModelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsYearNull() {
-                return this.IsNull(this.tableVehicle.YearColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetYearNull() {
-                this[this.tableVehicle.YearColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMileageNull() {
-                return this.IsNull(this.tableVehicle.MileageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMileageNull() {
-                this[this.tableVehicle.MileageColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2446,39 +2611,56 @@ namespace joesAutomotiveCRM.joesAutomotiveDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Phone Number", "Phone Number");
+            tableMapping.ColumnMappings.Add("Phone Number 2", "Phone Number 2");
             tableMapping.ColumnMappings.Add("Email Address", "Email Address");
             tableMapping.ColumnMappings.Add("Vehicle", "Vehicle");
-            tableMapping.ColumnMappings.Add("Invoices", "Image");
+            tableMapping.ColumnMappings.Add("Invoices", "Invoices");
+            tableMapping.ColumnMappings.Add("Image", "Image");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Customers] WHERE (([Customer ID] = @Original_Customer_ID) AND " +
-                "([Invoices] = @Original_Invoices))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Customers] WHERE (([Customer ID] = @Original_Customer_ID) AND ([Phone Number] = @Original_Phone_Number) AND ((@IsNull_Phone_Number_2 = 1 AND [Phone Number 2] IS NULL) OR ([Phone Number 2] = @Original_Phone_Number_2)) AND ((@IsNull_Email_Address = 1 AND [Email Address] IS NULL) OR ([Email Address] = @Original_Email_Address)) AND ([Invoices] = @Original_Invoices))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Customer_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone_Number", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone_Number_2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone_Number_2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email_Address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Customers] ([Name], [Address], [Phone Number], [Email Address], [Vehicle]) VALUES (@Name, @Address, @Phone_Number, @Email_Address, @Vehicle);
-SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, Invoices FROM Customers WHERE ([Customer ID] = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Customers] ([Name], [Address], [Phone Number], [Phone Number 2], [Email Address], [Vehicle], [Invoices], [Image]) VALUES (@Name, @Address, @Phone_Number, @Phone_Number_2, @Email_Address, @Vehicle, @Invoices, @Image);
+SELECT [Customer ID], Name, Address, [Phone Number], [Phone Number 2], [Email Address], Vehicle, Invoices, Image FROM Customers WHERE ([Customer ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone_Number", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Address", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone_Number_2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Customers] SET [Name] = @Name, [Address] = @Address, [Phone Number] = @Phone_Number, [Email Address] = @Email_Address, [Vehicle] = @Vehicle WHERE (([Customer ID] = @Original_Customer_ID) AND ([Invoices] = @Original_Invoices));
-SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, Invoices FROM Customers WHERE ([Customer ID] = @Customer_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Customers] SET [Name] = @Name, [Address] = @Address, [Phone Number] = @Phone_Number, [Phone Number 2] = @Phone_Number_2, [Email Address] = @Email_Address, [Vehicle] = @Vehicle, [Invoices] = @Invoices, [Image] = @Image WHERE (([Customer ID] = @Original_Customer_ID) AND ([Phone Number] = @Original_Phone_Number) AND ((@IsNull_Phone_Number_2 = 1 AND [Phone Number 2] IS NULL) OR ([Phone Number 2] = @Original_Phone_Number_2)) AND ((@IsNull_Email_Address = 1 AND [Email Address] IS NULL) OR ([Email Address] = @Original_Email_Address)) AND ([Invoices] = @Original_Invoices));
+SELECT [Customer ID], Name, Address, [Phone Number], [Phone Number 2], [Email Address], Vehicle, Invoices, Image FROM Customers WHERE ([Customer ID] = @Customer_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone_Number", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Address", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone_Number_2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Customer_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone_Number", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone_Number_2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone_Number_2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number 2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email_Address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoices", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Customer ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2492,30 +2674,12 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, In" +
-                "voices FROM dbo.Customers";
+            this._commandCollection[0].CommandText = "SELECT [Customer ID], Name, Address, [Phone Number], [Phone Number 2], [Email Add" +
+                "ress], Vehicle, Invoices, Image FROM dbo.Customers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, In" +
-                "voices FROM dbo.Customers WHERE ([Email Address] Like \'%\' + @value + \'%\')";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        Name, Address, [Phone Number], [Email Address], Vehicle\r\nFROM      " +
-                "      Customers\r\nWHERE        (Name LIKE \'%\' + @value + \'%\')";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, In" +
-                "voices FROM dbo.Customers WHERE ([Phone Number] LIKE \'%\' + @value + \'%\')";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.NChar, 12, global::System.Data.ParameterDirection.Input, 0, 0, "Phone Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2540,63 +2704,6 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             joesAutomotiveDataSet.CustomersDataTable dataTable = new joesAutomotiveDataSet.CustomersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchEmail(joesAutomotiveDataSet.CustomersDataTable dataTable, string value) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((value == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchName(joesAutomotiveDataSet.CustomersDataTable dataTable, string value) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((value == null)) {
-                throw new global::System.ArgumentNullException("value");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchPhone(joesAutomotiveDataSet.CustomersDataTable dataTable, string value) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((value == null)) {
-                throw new global::System.ArgumentNullException("value");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2632,13 +2739,35 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Customer_ID, byte[] Original_Invoices) {
+        public virtual int Delete(int Original_Customer_ID, string Original_Phone_Number, string Original_Phone_Number_2, string Original_Email_Address, string Original_Invoices) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Customer_ID));
+            if ((Original_Phone_Number == null)) {
+                throw new global::System.ArgumentNullException("Original_Phone_Number");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Phone_Number));
+            }
+            if ((Original_Phone_Number_2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Phone_Number_2));
+            }
+            if ((Original_Email_Address == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Email_Address));
+            }
             if ((Original_Invoices == null)) {
                 throw new global::System.ArgumentNullException("Original_Invoices");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_Invoices));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Invoices));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2660,7 +2789,7 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name, string Address, string Phone_Number, string Email_Address, string Vehicle) {
+        public virtual int Insert(string Name, string Address, string Phone_Number, string Phone_Number_2, string Email_Address, string Vehicle, string Invoices, byte[] Image) {
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -2679,17 +2808,35 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Phone_Number));
             }
-            if ((Email_Address == null)) {
+            if ((Phone_Number_2 == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Email_Address));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Phone_Number_2));
             }
-            if ((Vehicle == null)) {
+            if ((Email_Address == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Vehicle));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email_Address));
+            }
+            if ((Vehicle == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Vehicle));
+            }
+            if ((Invoices == null)) {
+                throw new global::System.ArgumentNullException("Invoices");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Invoices));
+            }
+            if ((Image == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((byte[])(Image));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2711,7 +2858,7 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Address, string Phone_Number, string Email_Address, string Vehicle, int Original_Customer_ID, byte[] Original_Invoices, int Customer_ID) {
+        public virtual int Update(string Name, string Address, string Phone_Number, string Phone_Number_2, string Email_Address, string Vehicle, string Invoices, byte[] Image, int Original_Customer_ID, string Original_Phone_Number, string Original_Phone_Number_2, string Original_Email_Address, string Original_Invoices, int Customer_ID) {
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -2730,26 +2877,66 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Phone_Number));
             }
-            if ((Email_Address == null)) {
+            if ((Phone_Number_2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Email_Address));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Phone_Number_2));
             }
-            if ((Vehicle == null)) {
+            if ((Email_Address == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Vehicle));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email_Address));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Customer_ID));
+            if ((Vehicle == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Vehicle));
+            }
+            if ((Invoices == null)) {
+                throw new global::System.ArgumentNullException("Invoices");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Invoices));
+            }
+            if ((Image == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte[])(Image));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Customer_ID));
+            if ((Original_Phone_Number == null)) {
+                throw new global::System.ArgumentNullException("Original_Phone_Number");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Phone_Number));
+            }
+            if ((Original_Phone_Number_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Phone_Number_2));
+            }
+            if ((Original_Email_Address == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Email_Address));
+            }
             if ((Original_Invoices == null)) {
                 throw new global::System.ArgumentNullException("Original_Invoices");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((byte[])(Original_Invoices));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Invoices));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Customer_ID));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Customer_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2770,8 +2957,8 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Address, string Phone_Number, string Email_Address, string Vehicle, int Original_Customer_ID, byte[] Original_Invoices) {
-            return this.Update(Name, Address, Phone_Number, Email_Address, Vehicle, Original_Customer_ID, Original_Invoices, Original_Customer_ID);
+        public virtual int Update(string Name, string Address, string Phone_Number, string Phone_Number_2, string Email_Address, string Vehicle, string Invoices, byte[] Image, int Original_Customer_ID, string Original_Phone_Number, string Original_Phone_Number_2, string Original_Email_Address, string Original_Invoices) {
+            return this.Update(Name, Address, Phone_Number, Phone_Number_2, Email_Address, Vehicle, Invoices, Image, Original_Customer_ID, Original_Phone_Number, Original_Phone_Number_2, Original_Email_Address, Original_Invoices, Original_Customer_ID);
         }
     }
     
@@ -2897,6 +3084,9 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Invoices";
             tableMapping.ColumnMappings.Add("Invoice ID", "Invoice ID");
+            tableMapping.ColumnMappings.Add("Customer", "Customer");
+            tableMapping.ColumnMappings.Add("Caseworker", "Caseworker");
+            tableMapping.ColumnMappings.Add("Description", "Description");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2905,9 +3095,23 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoice_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoice ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Invoices] DEFAULT VALUES;\r\nSELECT [Invoice ID] FROM Invoices W" +
-                "HERE ([Invoice ID] = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Invoices] ([Customer], [Caseworker], [Description]) VALUES (@C" +
+                "ustomer, @Caseworker, @Description);\r\nSELECT [Invoice ID], Customer, Caseworker," +
+                " Description FROM Invoices WHERE ([Invoice ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Caseworker", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Caseworker", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Invoices] SET [Customer] = @Customer, [Caseworker] = @Caseworker, [Description] = @Description WHERE (([Invoice ID] = @Original_Invoice_ID));
+SELECT [Invoice ID], Customer, Caseworker, Description FROM Invoices WHERE ([Invoice ID] = @Invoice_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Caseworker", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Caseworker", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Invoice_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Invoice ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Invoice_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Invoice ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2923,7 +3127,7 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Invoice ID] FROM dbo.Invoices";
+            this._commandCollection[0].CommandText = "SELECT [Invoice ID], Customer, Caseworker, Description FROM dbo.Invoices";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3006,7 +3210,25 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert() {
+        public virtual int Insert(string Customer, string Caseworker, string Description) {
+            if ((Customer == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Customer));
+            }
+            if ((Caseworker == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Caseworker));
+            }
+            if ((Description == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Description));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3021,6 +3243,55 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Customer, string Caseworker, string Description, int Original_Invoice_ID, int Invoice_ID) {
+            if ((Customer == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Customer));
+            }
+            if ((Caseworker == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Caseworker));
+            }
+            if ((Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Description));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Invoice_ID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Invoice_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Customer, string Caseworker, string Description, int Original_Invoice_ID) {
+            return this.Update(Customer, Caseworker, Description, Original_Invoice_ID, Original_Invoice_ID);
         }
     }
     
@@ -3155,44 +3426,40 @@ SELECT [Customer ID], Name, Address, [Phone Number], [Email Address], Vehicle, I
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Parts] WHERE (([Part ID] = @Original_Part_ID) AND ((@IsNull_Part_name = 1 AND [Part name] IS NULL) OR ([Part name] = @Original_Part_name)) AND ([Part cost] = @Original_Part_cost) AND ([Parts in stock] = @Original_Parts_in_stock) AND ([Parts ordered] = @Original_Parts_ordered) AND ([Can be applied to] = @Original_Can_be_applied_to))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Parts] WHERE (([Part ID] = @Original_Part_ID) AND ([Part cost]" +
+                " = @Original_Part_cost) AND ([Parts in stock] = @Original_Parts_in_stock) AND ([" +
+                "Parts ordered] = @Original_Parts_ordered))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Part_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Parts_in_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts in stock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Parts_ordered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts ordered", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Can_be_applied_to", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Parts] ([Part name], [Part cost], [Parts in stock], [Parts ordered], [Part photo], [Can be applied to]) VALUES (@Part_name, @Part_cost, @Parts_in_stock, @Parts_ordered, @Part_photo, @Can_be_applied_to);
 SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [Part photo], [Can be applied to] FROM Parts WHERE ([Part ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Parts_in_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts in stock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Parts_ordered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts ordered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Can_be_applied_to", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Can_be_applied_to", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Parts] SET [Part name] = @Part_name, [Part cost] = @Part_cost, [Parts in stock] = @Parts_in_stock, [Parts ordered] = @Parts_ordered, [Part photo] = @Part_photo, [Can be applied to] = @Can_be_applied_to WHERE (([Part ID] = @Original_Part_ID) AND ((@IsNull_Part_name = 1 AND [Part name] IS NULL) OR ([Part name] = @Original_Part_name)) AND ([Part cost] = @Original_Part_cost) AND ([Parts in stock] = @Original_Parts_in_stock) AND ([Parts ordered] = @Original_Parts_ordered) AND ([Can be applied to] = @Original_Can_be_applied_to));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Parts] SET [Part name] = @Part_name, [Part cost] = @Part_cost, [Parts in stock] = @Parts_in_stock, [Parts ordered] = @Parts_ordered, [Part photo] = @Part_photo, [Can be applied to] = @Can_be_applied_to WHERE (([Part ID] = @Original_Part_ID) AND ([Part cost] = @Original_Part_cost) AND ([Parts in stock] = @Original_Parts_in_stock) AND ([Parts ordered] = @Original_Parts_ordered));
 SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [Part photo], [Can be applied to] FROM Parts WHERE ([Part ID] = @Part_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Parts_in_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts in stock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Parts_ordered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts ordered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Can_be_applied_to", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Can_be_applied_to", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Part_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Part_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Parts_in_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts in stock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Parts_ordered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Parts ordered", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Can_be_applied_to", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Can be applied to", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Part ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3271,25 +3538,11 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Part_ID, string Original_Part_name, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered, string Original_Can_be_applied_to) {
+        public virtual int Delete(int Original_Part_ID, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Part_ID));
-            if ((Original_Part_name == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Part_name));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_Part_cost));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Parts_in_stock));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Parts_ordered));
-            if ((Original_Can_be_applied_to == null)) {
-                throw new global::System.ArgumentNullException("Original_Can_be_applied_to");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Can_be_applied_to));
-            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_Part_cost));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Parts_in_stock));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Parts_ordered));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3327,7 +3580,7 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
                 this.Adapter.InsertCommand.Parameters[4].Value = ((byte[])(Part_photo));
             }
             if ((Can_be_applied_to == null)) {
-                throw new global::System.ArgumentNullException("Can_be_applied_to");
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Can_be_applied_to));
@@ -3352,7 +3605,7 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Part_name, decimal Part_cost, int Parts_in_stock, int Parts_ordered, byte[] Part_photo, string Can_be_applied_to, int Original_Part_ID, string Original_Part_name, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered, string Original_Can_be_applied_to, int Part_ID) {
+        public virtual int Update(string Part_name, decimal Part_cost, int Parts_in_stock, int Parts_ordered, byte[] Part_photo, string Can_be_applied_to, int Original_Part_ID, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered, int Part_ID) {
             if ((Part_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3369,30 +3622,16 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(Part_photo));
             }
             if ((Can_be_applied_to == null)) {
-                throw new global::System.ArgumentNullException("Can_be_applied_to");
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Can_be_applied_to));
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Part_ID));
-            if ((Original_Part_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Part_name));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Part_cost));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Parts_in_stock));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Parts_ordered));
-            if ((Original_Can_be_applied_to == null)) {
-                throw new global::System.ArgumentNullException("Original_Can_be_applied_to");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Can_be_applied_to));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Part_ID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_Part_cost));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Parts_in_stock));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Parts_ordered));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Part_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3413,8 +3652,8 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Part_name, decimal Part_cost, int Parts_in_stock, int Parts_ordered, byte[] Part_photo, string Can_be_applied_to, int Original_Part_ID, string Original_Part_name, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered, string Original_Can_be_applied_to) {
-            return this.Update(Part_name, Part_cost, Parts_in_stock, Parts_ordered, Part_photo, Can_be_applied_to, Original_Part_ID, Original_Part_name, Original_Part_cost, Original_Parts_in_stock, Original_Parts_ordered, Original_Can_be_applied_to, Original_Part_ID);
+        public virtual int Update(string Part_name, decimal Part_cost, int Parts_in_stock, int Parts_ordered, byte[] Part_photo, string Can_be_applied_to, int Original_Part_ID, decimal Original_Part_cost, int Original_Parts_in_stock, int Original_Parts_ordered) {
+            return this.Update(Part_name, Part_cost, Parts_in_stock, Parts_ordered, Part_photo, Can_be_applied_to, Original_Part_ID, Original_Part_cost, Original_Parts_in_stock, Original_Parts_ordered, Original_Part_ID);
         }
     }
     
@@ -3540,6 +3779,7 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Vehicle";
             tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Make", "Make");
             tableMapping.ColumnMappings.Add("Model", "Model");
             tableMapping.ColumnMappings.Add("Year", "Year");
             tableMapping.ColumnMappings.Add("Mileage", "Mileage");
@@ -3549,52 +3789,48 @@ SELECT [Part ID], [Part name], [Part cost], [Parts in stock], [Parts ordered], [
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Vehicle] WHERE (([ID] = @Original_ID) AND ((@IsNull_Model = 1 AND [Model] IS NULL) OR ([Model] = @Original_Model)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Mileage = 1 AND [Mileage] IS NULL) OR ([Mileage] = @Original_Mileage)) AND ([Date Recieved] = @Original_Date_Recieved) AND ((@IsNull_Date_Return = 1 AND [Date Return] IS NULL) OR ([Date Return] = @Original_Date_Return)) AND ([Owner] = @Original_Owner))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Vehicle] WHERE (([ID] = @Original_ID) AND ([Make] = @Original_Make) AND ([Model] = @Original_Model) AND ([Year] = @Original_Year) AND ([Mileage] = @Original_Mileage) AND ([Date Recieved] = @Original_Date_Recieved) AND ((@IsNull_Date_Return = 1 AND [Date Return] IS NULL) OR ([Date Return] = @Original_Date_Return)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Model", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Make", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Make", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Year", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Mileage", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Mileage", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_Recieved", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Recieved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date_Return", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_Return", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Vehicle] ([Model], [Year], [Mileage], [Date Recieved], [Date Return], [Owner]) VALUES (@Model, @Year, @Mileage, @Date_Recieved, @Date_Return, @Owner);
-SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehicle WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Vehicle] ([Make], [Model], [Year], [Mileage], [Date Recieved], [Date Return], [Owner]) VALUES (@Make, @Model, @Year, @Mileage, @Date_Recieved, @Date_Return, @Owner);
+SELECT ID, Make, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehicle WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Make", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mileage", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_Recieved", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Recieved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_Return", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Owner", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Vehicle] SET [Model] = @Model, [Year] = @Year, [Mileage] = @Mileage, [Date Recieved] = @Date_Recieved, [Date Return] = @Date_Return, [Owner] = @Owner WHERE (([ID] = @Original_ID) AND ((@IsNull_Model = 1 AND [Model] IS NULL) OR ([Model] = @Original_Model)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Mileage = 1 AND [Mileage] IS NULL) OR ([Mileage] = @Original_Mileage)) AND ([Date Recieved] = @Original_Date_Recieved) AND ((@IsNull_Date_Return = 1 AND [Date Return] IS NULL) OR ([Date Return] = @Original_Date_Return)) AND ([Owner] = @Original_Owner));
-SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehicle WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Vehicle] SET [Make] = @Make, [Model] = @Model, [Year] = @Year, [Mileage] = @Mileage, [Date Recieved] = @Date_Recieved, [Date Return] = @Date_Return, [Owner] = @Owner WHERE (([ID] = @Original_ID) AND ([Make] = @Original_Make) AND ([Model] = @Original_Model) AND ([Year] = @Original_Year) AND ([Mileage] = @Original_Mileage) AND ([Date Recieved] = @Original_Date_Recieved) AND ((@IsNull_Date_Return = 1 AND [Date Return] IS NULL) OR ([Date Return] = @Original_Date_Return)));
+SELECT ID, Make, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehicle WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Make", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mileage", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_Recieved", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Recieved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_Return", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Owner", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Model", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Make", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Make", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Year", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Mileage", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Mileage", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_Recieved", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Recieved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date_Return", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_Return", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Owner", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3608,34 +3844,12 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM dbo.V" +
-                "ehicle";
+            this._commandCollection[0].CommandText = "SELECT ID, Make, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM" +
+                " dbo.Vehicle";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"INSERT INTO [dbo].[Vehicle] ([Model], [Year], [Mileage], [Date Recieved], [Date Return], [Owner]) VALUES (@Model, @Year, @Mileage, @Date_Recieved, @Owner);
-SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehicle WHERE (ID = SCOPE_IDENTITY())";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Year", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mileage", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Mileage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_Recieved", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date Recieved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Owner", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date Return", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM dbo.V" +
-                "ehicle WHERE Model LIKE \'%\' + @value + \'%\'";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM dbo.V" +
-                "ehicle WHERE Model LIKE \'%\' + @value + \'%\'";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3660,44 +3874,6 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
             joesAutomotiveDataSet.VehicleDataTable dataTable = new joesAutomotiveDataSet.VehicleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchMake(joesAutomotiveDataSet.VehicleDataTable dataTable, string value) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((value == null)) {
-                throw new global::System.ArgumentNullException("value");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchModel(joesAutomotiveDataSet.VehicleDataTable dataTable, string value) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((value == null)) {
-                throw new global::System.ArgumentNullException("value");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3733,46 +3909,40 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return, string Original_Owner) {
+        public virtual int Delete(int Original_ID, string Original_Make, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_Model == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((Original_Make == null)) {
+                throw new global::System.ArgumentNullException("Original_Make");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Make));
+            }
+            if ((Original_Model == null)) {
+                throw new global::System.ArgumentNullException("Original_Model");
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Model));
             }
             if ((Original_Year == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Year");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Year));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Year));
             }
             if ((Original_Mileage == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Mileage");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Mileage));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Mileage));
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_Date_Recieved));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Date_Recieved));
             if ((Original_Date_Return.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_Date_Return.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_Date_Return.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Owner == null)) {
-                throw new global::System.ArgumentNullException("Original_Owner");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Owner));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3794,37 +3964,43 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner) {
-            if ((Model == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string Make, string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner) {
+            if ((Make == null)) {
+                throw new global::System.ArgumentNullException("Make");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Model));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Make));
+            }
+            if ((Model == null)) {
+                throw new global::System.ArgumentNullException("Model");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Model));
             }
             if ((Year == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Year");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Year));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Year));
             }
             if ((Mileage == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Mileage");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Mileage));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Mileage));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Date_Recieved));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Date_Recieved));
             if ((Date_Return.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Date_Return.Value));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Date_Return.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Owner == null)) {
                 throw new global::System.ArgumentNullException("Owner");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Owner));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Owner));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3846,79 +4022,79 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner, int Original_ID, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return, string Original_Owner, int ID) {
-            if ((Model == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(string Make, string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner, int Original_ID, string Original_Make, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return, int ID) {
+            if ((Make == null)) {
+                throw new global::System.ArgumentNullException("Make");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Model));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Make));
+            }
+            if ((Model == null)) {
+                throw new global::System.ArgumentNullException("Model");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Model));
             }
             if ((Year == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Year");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Year));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Year));
             }
             if ((Mileage == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Mileage");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Mileage));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Mileage));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Date_Recieved));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Date_Recieved));
             if ((Date_Return.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Date_Return.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Date_Return.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Owner == null)) {
                 throw new global::System.ArgumentNullException("Owner");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Owner));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Owner));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
-            if ((Original_Model == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            if ((Original_Make == null)) {
+                throw new global::System.ArgumentNullException("Original_Make");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Model));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Make));
+            }
+            if ((Original_Model == null)) {
+                throw new global::System.ArgumentNullException("Original_Model");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Model));
             }
             if ((Original_Year == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Year");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Year));
             }
             if ((Original_Mileage == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Mileage");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Mileage));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Mileage));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Date_Recieved));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Date_Recieved));
             if ((Original_Date_Return.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_Date_Return.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Date_Return.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Owner == null)) {
-                throw new global::System.ArgumentNullException("Original_Owner");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Owner));
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(ID));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3939,61 +4115,8 @@ SELECT ID, Model, Year, Mileage, [Date Recieved], [Date Return], Owner FROM Vehi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner, int Original_ID, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return, string Original_Owner) {
-            return this.Update(Model, Year, Mileage, Date_Recieved, Date_Return, Owner, Original_ID, Original_Model, Original_Year, Original_Mileage, Original_Date_Recieved, Original_Date_Return, Original_Owner, Original_ID);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int NewVehicle(string Model, string Year, string Mileage, string Date_Recieved, string Owner) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((Model == null)) {
-                throw new global::System.ArgumentNullException("Model");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(Model));
-            }
-            if ((Year == null)) {
-                throw new global::System.ArgumentNullException("Year");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(Year));
-            }
-            if ((Mileage == null)) {
-                throw new global::System.ArgumentNullException("Mileage");
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Mileage));
-            }
-            if ((Date_Recieved == null)) {
-                throw new global::System.ArgumentNullException("Date_Recieved");
-            }
-            else {
-                command.Parameters[3].Value = ((string)(Date_Recieved));
-            }
-            if ((Owner == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Owner));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
+        public virtual int Update(string Make, string Model, string Year, string Mileage, System.DateTime Date_Recieved, global::System.Nullable<global::System.DateTime> Date_Return, string Owner, int Original_ID, string Original_Make, string Original_Model, string Original_Year, string Original_Mileage, System.DateTime Original_Date_Recieved, global::System.Nullable<global::System.DateTime> Original_Date_Return) {
+            return this.Update(Make, Model, Year, Mileage, Date_Recieved, Date_Return, Owner, Original_ID, Original_Make, Original_Model, Original_Year, Original_Mileage, Original_Date_Recieved, Original_Date_Return, Original_ID);
         }
     }
     

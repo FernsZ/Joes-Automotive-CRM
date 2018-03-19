@@ -31,5 +31,10 @@ namespace joesAutomotiveCRM
             this.partsTableAdapter.Fill(this.joesAutomotiveDataSet.Parts);
 
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
