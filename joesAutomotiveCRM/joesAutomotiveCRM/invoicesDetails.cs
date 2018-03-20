@@ -17,7 +17,8 @@ namespace joesAutomotiveCRM
         {
             InitializeComponent();
         }
-
+        int total = 0;
+        string S1,S2,S3,S4,S5,S6,S7,S8;
         private void invoicesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -48,16 +49,12 @@ namespace joesAutomotiveCRM
             /*The purpose of refresh functions is to check the data in the database 
             and set all textboxes on the form to that.*/
             txtInvoiceLn1.Text = "";
-            txtInvoiceLn2.Text = "";
-            txtInvoiceLn3.Text = "";
-            txtInvoiceLn4.Text = "";
             txtTax.Text = "";
             txtInvoiceNo.Text = "";
             txtPONo.Text = "";
             txtTerms.Text = "";
             txtDueDate.Text = "";
             txtAppType.Text = "";
-
             listBoxInvoiceItems.SelectedIndex = 0;
             txtDesc.Text = "";
         }
@@ -66,7 +63,6 @@ namespace joesAutomotiveCRM
         {
             /*The save function sets the items in the database
             to what is currently on the form.*/
-
         }
 
         private void checkBoxFluidCheckup_CheckedChanged(object sender, EventArgs e)

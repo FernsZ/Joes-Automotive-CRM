@@ -258,6 +258,7 @@
             this.customersGridV.Name = "customersGridV";
             this.customersGridV.Size = new System.Drawing.Size(581, 237);
             this.customersGridV.TabIndex = 3;
+            this.customersGridV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersGridV_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

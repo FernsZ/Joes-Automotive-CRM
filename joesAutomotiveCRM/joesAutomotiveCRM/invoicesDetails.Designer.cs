@@ -122,21 +122,21 @@
             // 
             // txtInvoiceNo
             // 
-            this.txtInvoiceNo.Location = new System.Drawing.Point(402, 22);
+            this.txtInvoiceNo.Location = new System.Drawing.Point(402, 29);
             this.txtInvoiceNo.Name = "txtInvoiceNo";
             this.txtInvoiceNo.Size = new System.Drawing.Size(60, 20);
             this.txtInvoiceNo.TabIndex = 5;
             // 
             // txtTax
             // 
-            this.txtTax.Location = new System.Drawing.Point(336, 22);
+            this.txtTax.Location = new System.Drawing.Point(336, 29);
             this.txtTax.Name = "txtTax";
             this.txtTax.Size = new System.Drawing.Size(60, 20);
             this.txtTax.TabIndex = 6;
             // 
             // txtDueDate
             // 
-            this.txtDueDate.Location = new System.Drawing.Point(402, 64);
+            this.txtDueDate.Location = new System.Drawing.Point(401, 71);
             this.txtDueDate.Name = "txtDueDate";
             this.txtDueDate.Size = new System.Drawing.Size(60, 20);
             this.txtDueDate.TabIndex = 8;
@@ -144,7 +144,7 @@
             // labelTaxDate
             // 
             this.labelTaxDate.AutoSize = true;
-            this.labelTaxDate.Location = new System.Drawing.Point(343, 6);
+            this.labelTaxDate.Location = new System.Drawing.Point(343, 13);
             this.labelTaxDate.Name = "labelTaxDate";
             this.labelTaxDate.Size = new System.Drawing.Size(51, 13);
             this.labelTaxDate.TabIndex = 10;
@@ -153,7 +153,7 @@
             // labelInvoiceNo
             // 
             this.labelInvoiceNo.AutoSize = true;
-            this.labelInvoiceNo.Location = new System.Drawing.Point(404, 6);
+            this.labelInvoiceNo.Location = new System.Drawing.Point(404, 13);
             this.labelInvoiceNo.Name = "labelInvoiceNo";
             this.labelInvoiceNo.Size = new System.Drawing.Size(62, 13);
             this.labelInvoiceNo.TabIndex = 11;
@@ -162,7 +162,7 @@
             // labelPONo
             // 
             this.labelPONo.AutoSize = true;
-            this.labelPONo.Location = new System.Drawing.Point(277, 48);
+            this.labelPONo.Location = new System.Drawing.Point(276, 55);
             this.labelPONo.Name = "labelPONo";
             this.labelPONo.Size = new System.Drawing.Size(48, 13);
             this.labelPONo.TabIndex = 12;
@@ -170,14 +170,14 @@
             // 
             // txtTerms
             // 
-            this.txtTerms.Location = new System.Drawing.Point(336, 64);
+            this.txtTerms.Location = new System.Drawing.Point(335, 71);
             this.txtTerms.Name = "txtTerms";
             this.txtTerms.Size = new System.Drawing.Size(60, 20);
             this.txtTerms.TabIndex = 13;
             // 
             // txtPONo
             // 
-            this.txtPONo.Location = new System.Drawing.Point(270, 64);
+            this.txtPONo.Location = new System.Drawing.Point(269, 71);
             this.txtPONo.Name = "txtPONo";
             this.txtPONo.Size = new System.Drawing.Size(60, 20);
             this.txtPONo.TabIndex = 14;
@@ -185,7 +185,7 @@
             // labelTerms
             // 
             this.labelTerms.AutoSize = true;
-            this.labelTerms.Location = new System.Drawing.Point(346, 48);
+            this.labelTerms.Location = new System.Drawing.Point(345, 55);
             this.labelTerms.Name = "labelTerms";
             this.labelTerms.Size = new System.Drawing.Size(36, 13);
             this.labelTerms.TabIndex = 15;
@@ -194,7 +194,7 @@
             // labelDueDate
             // 
             this.labelDueDate.AutoSize = true;
-            this.labelDueDate.Location = new System.Drawing.Point(405, 48);
+            this.labelDueDate.Location = new System.Drawing.Point(404, 55);
             this.labelDueDate.Name = "labelDueDate";
             this.labelDueDate.Size = new System.Drawing.Size(53, 13);
             this.labelDueDate.TabIndex = 16;
@@ -202,7 +202,7 @@
             // 
             // txtAppType
             // 
-            this.txtAppType.Location = new System.Drawing.Point(270, 103);
+            this.txtAppType.Location = new System.Drawing.Point(267, 119);
             this.txtAppType.Name = "txtAppType";
             this.txtAppType.Size = new System.Drawing.Size(192, 20);
             this.txtAppType.TabIndex = 17;
@@ -210,7 +210,7 @@
             // labelAppType
             // 
             this.labelAppType.AutoSize = true;
-            this.labelAppType.Location = new System.Drawing.Point(323, 87);
+            this.labelAppType.Location = new System.Drawing.Point(320, 103);
             this.labelAppType.Name = "labelAppType";
             this.labelAppType.Size = new System.Drawing.Size(86, 13);
             this.labelAppType.TabIndex = 18;
@@ -218,7 +218,7 @@
             // 
             // txtInvoiceLn1
             // 
-            this.txtInvoiceLn1.Location = new System.Drawing.Point(8, 22);
+            this.txtInvoiceLn1.Location = new System.Drawing.Point(7, 48);
             this.txtInvoiceLn1.Name = "txtInvoiceLn1";
             this.txtInvoiceLn1.Size = new System.Drawing.Size(247, 20);
             this.txtInvoiceLn1.TabIndex = 19;
@@ -226,7 +226,7 @@
             // labelInvoiceTo
             // 
             this.labelInvoiceTo.AutoSize = true;
-            this.labelInvoiceTo.Location = new System.Drawing.Point(7, 6);
+            this.labelInvoiceTo.Location = new System.Drawing.Point(6, 32);
             this.labelInvoiceTo.Name = "labelInvoiceTo";
             this.labelInvoiceTo.Size = new System.Drawing.Size(58, 13);
             this.labelInvoiceTo.TabIndex = 23;
@@ -235,7 +235,7 @@
             // labelCaseworker
             // 
             this.labelCaseworker.AutoSize = true;
-            this.labelCaseworker.Location = new System.Drawing.Point(5, 71);
+            this.labelCaseworker.Location = new System.Drawing.Point(4, 87);
             this.labelCaseworker.Name = "labelCaseworker";
             this.labelCaseworker.Size = new System.Drawing.Size(88, 13);
             this.labelCaseworker.TabIndex = 24;
@@ -243,14 +243,14 @@
             // 
             // txtCaseworker
             // 
-            this.txtCaseworker.Location = new System.Drawing.Point(8, 87);
+            this.txtCaseworker.Location = new System.Drawing.Point(7, 103);
             this.txtCaseworker.Name = "txtCaseworker";
             this.txtCaseworker.Size = new System.Drawing.Size(247, 20);
             this.txtCaseworker.TabIndex = 25;
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(7, 144);
+            this.txtDesc.Location = new System.Drawing.Point(7, 152);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(247, 20);
             this.txtDesc.TabIndex = 26;
@@ -282,7 +282,7 @@
             // labelDesc
             // 
             this.labelDesc.AutoSize = true;
-            this.labelDesc.Location = new System.Drawing.Point(4, 128);
+            this.labelDesc.Location = new System.Drawing.Point(4, 136);
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(60, 13);
             this.labelDesc.TabIndex = 30;
