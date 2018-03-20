@@ -259,6 +259,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(266, 168);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(60, 20);
             this.txtPrice.TabIndex = 29;
             // 
@@ -266,6 +267,7 @@
             // 
             this.txtVat.Location = new System.Drawing.Point(332, 168);
             this.txtVat.Name = "txtVat";
+            this.txtVat.ReadOnly = true;
             this.txtVat.Size = new System.Drawing.Size(60, 20);
             this.txtVat.TabIndex = 28;
             // 
