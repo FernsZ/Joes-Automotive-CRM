@@ -17,8 +17,6 @@ namespace joesAutomotiveCRM
         {
             InitializeComponent();
         }
-        int total = 0;
-        string S1,S2,S3,S4,S5,S6,S7,S8;
         private void invoicesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

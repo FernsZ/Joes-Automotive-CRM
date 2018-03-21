@@ -18,7 +18,7 @@ namespace joesAutomotiveCRM
         }
         private void showDetailsButton_Click(object sender, EventArgs e)
         {
-            customersGrid row = customersGrid.SelectedRow;
+            int customerID = int.Parse(customersGridV.CurrentRow.Cells[0].Value.ToString());
             customersDetails customersD = new customersDetails(customerID, true);
             customersD.ShowDialog();
         }
@@ -50,12 +50,7 @@ namespace joesAutomotiveCRM
 
         private void customersGridV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = 0;
-            string[,] storage = new string[1, 1];
-            foreach (DataRow row in customersGridV.Rows)
-            {
-                storage[i++, 1] = null;
-            }
+
         }
     }
 }

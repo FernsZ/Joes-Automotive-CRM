@@ -14,9 +14,10 @@ namespace joesAutomotiveCRM
     {
         enum Make { Audi, Cadillac, Chevrolet, Chrysler, Ferrari, Ford, GM, Lexus, MercedesBenz, Porsche, Tesla, Toyota, Volkswagen, Other, Error }
         Make make;
-
+        int VehicleID;
         public vehicleDetails(int vehicleID, bool showButton)
         {
+            VehicleID = vehicleID;
             InitializeComponent();
             refreshInfo();
             vehicleButton.Visible = showButton;
@@ -37,13 +38,7 @@ namespace joesAutomotiveCRM
         {
             /*The purpose of refresh functions is to check the data in the database 
             and set all textboxes on the form to that.*/
-            this.Text = "";
-            make = makeParse("");
-            txtMake.Text = make.ToString();
-            if(txtMake.Text == "MercedesBenz") { txtMake.Text = "Mercedes-Benz"; }
-            txtModel.Text = "";
-            txtYear.Text = "";
-            txtColor.Text = "";
+            this.Text = this.vehicleTableAdapter.getModel(VehicleID);
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -109,6 +104,21 @@ namespace joesAutomotiveCRM
                     break;
             }
             return make;
+        }
+
+        private void vehicleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vehicleBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesAutomotiveDataSet);
+
+        }
+
+        private void vehicleDetails_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'joesAutomotiveDataSet.Vehicle' table. You can move, or remove it, as needed.
+            this.vehicleTableAdapter.Fill(this.joesAutomotiveDataSet.Vehicle);
+
         }
     }
 }

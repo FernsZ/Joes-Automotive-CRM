@@ -12,10 +12,11 @@ namespace joesAutomotiveCRM
 {
     public partial class customersDetails : Form
     {
+        int CustomerID;
         public customersDetails(int customerID, bool showButton)
         {
+            CustomerID = customerID;
             InitializeComponent();
-            this.Text = "";
             refreshInfo();
             vehicleButton.Visible = showButton;
         }
@@ -45,12 +46,6 @@ namespace joesAutomotiveCRM
         {
             /*The purpose of refresh functions is to check the data in the database 
             and set all textboxes on the form to that.*/
-            this.Text = "";
-            txtName.Text = "";
-            txtPhone.Text = "";
-            txtPhone2.Text = "";
-            txtAddress.Text = "";
-            txtAddressLn2.Text = "";
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -66,6 +61,8 @@ namespace joesAutomotiveCRM
 
         private void customersDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'joesAutomotiveDataSet.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.joesAutomotiveDataSet.Customers);
 
         }
 
@@ -73,6 +70,14 @@ namespace joesAutomotiveCRM
         {
             int vehicleID = 0;
             vehicleDetails vehicleD = new vehicleDetails(vehicleID, false);
+        }
+
+        private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.customersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesAutomotiveDataSet);
+
         }
     }
 }

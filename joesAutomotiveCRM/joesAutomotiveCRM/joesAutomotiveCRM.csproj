@@ -85,6 +85,9 @@
     <Compile Include="invoicesGrid.Designer.cs">
       <DependentUpon>invoicesGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="joesAutomotiveDataSet.cs">
+      <DependentUpon>joesAutomotiveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="joesAutomotiveDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
